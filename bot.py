@@ -1,9 +1,14 @@
 import telebot
 from telebot import types
 import os
+from dotenv import load_dotenv
 
-TOKEN = os.getenv("8186335170:AAGMcRgozLKGhoY_BEl7_C2FRiUpvADfr2Y")
-ADMIN_CHAT_ID = os.getenv("7351963602")
+# Загружаем переменные из файла .env
+load_dotenv()
+
+# Получаем токен и ID админа из окружения
+TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
 MENTOR_USERNAME = "haruki16st"  # твой ник
 
 bot = telebot.TeleBot(TOKEN)
